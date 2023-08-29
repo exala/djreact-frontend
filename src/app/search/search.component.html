@@ -1,0 +1,21 @@
+
+<p style="text-align:center; margin-top: -10%; font-size: xx-large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Search Your Products Here
+    <button (click)="onLogout()" class="logout-btn" type="submit" style="background: rgb(64, 75, 135);color:white; margin-left: 20%;" routerLink = "">Logout</button></p>
+<!-- <button class="logout-btn" type="submit">Logout</button> -->
+<form action="" class="search-bar">
+    <input id="exchageRateDate" type="search" name="search" pattern=".*\S.*" required>
+    <button (click)="myFunc()" class="search-btn" type="submit">
+      <span>Search</span>
+    </button>
+    
+  </form>
+  <h1 style="text-align: center;">These are the list of all the Products</h1>
+  <ul class="list-group">
+    <li 
+        *ngFor="let post of posts"
+        class="list-group-item">
+        <h2>Title: {{ post.title }}</h2>
+        <br>
+        <h3>Description: {{ post.content }}</h3>
+    </li>
+  </ul>

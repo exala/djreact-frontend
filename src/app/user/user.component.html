@@ -1,0 +1,41 @@
+<!-- <div style="text-align: center;">
+  <h1>Login</h1>
+    <input [(ngModel)]="input.username" placeholder="Username">
+    <br>
+    <input [(ngModel)]="input.password" type="password" placeholder="Password">
+    <br>
+    <button (click)="onLogin()">Login</button>
+    <br>
+    <button (click)="onLogout()">Logout</button>
+</div> -->
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page with Background Image Example</title>
+  <link rel="stylesheet" href="./user.component.scss">
+
+</head>
+<body>
+  <router-outlet></router-outlet>
+
+<div id="bg"></div>
+<form>
+  <div class="form-field">
+    <input [(ngModel)]="input.username" [ngModelOptions]="{standalone: true}" placeholder="Username" required/>
+  </div>
+  
+  <div class="form-field">
+    <input [(ngModel)]="input.password" [ngModelOptions]="{standalone: true}" type="password" placeholder="Password" required/>                         </div>
+  
+  <div class="form-field">
+    <button (click)="onLogin()" class="btn" type="submit">Log in</button>
+  </div>
+</form>
+
+
+  
+</body>
+</html>
